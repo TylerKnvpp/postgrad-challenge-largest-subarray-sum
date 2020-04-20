@@ -16,15 +16,6 @@ function largestSubarraySum(array) {
     if (results.largestSum < results.trackingSum) {
       results.largestSum = results.trackingSum;
     }
-
-    // if (array[i] + results.trackingSum > results.trackingSum) {
-    //   results.trackingSum += array[i];
-    // }
-
-    // if (array[i] + array[i + 1] > array[i - 1]) {
-    //   results.trackingSum += array[i];
-    //   results.largestSum += array[i];
-    // }
   }
 
   return results.largestSum;
