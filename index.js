@@ -4,13 +4,16 @@ function largestSubarraySum(array) {
   let results = {
     trackingSum: 0,
     largestSum: 0,
+    numsToAdd: [],
   };
 
   for (let i = 0; i < array.length; i++) {
     results.trackingSum += array[i];
+    results.numsToAdd.push(array[i]);
 
     if (results.trackingSum < 0) {
       results.trackingSum = 0;
+      results.numsToAdd.pop();
     }
 
     if (results.largestSum < results.trackingSum) {
